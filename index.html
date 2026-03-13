@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosso Casamento - Miguel e Gabriela 💍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>💍 Lista de Presentes do Casamento 💍</h1>
+  <p>Queridos convidados, obrigado pela visita! Escolha um presente para o casal Miguel e Gabriela ❤️</p>
+</header>
+
+<div class="countdown">
+  <h2>⏳ Faltam apenas:</h2>
+  <p id="timer"></p>
+</div>
+
+<div class="container">
+
+  <!-- TV -->
+  <div class="card" data-id="tv">
+    <img src="https://i.postimg.cc/XvjtWXy0/tv.png" alt="Smart TV 50">
+    <h2>📺 Smart TV 50"</h2>
+    <p class="price">R$ 2.500</p>
+    <textarea placeholder="Mensagem interna"></textarea>
+    <button onclick="darPresente(this)">Dar Presente 🎁</button>
+    <p class="status"></p>
+  </div>
+
+  <!-- Fogão -->
+  <div class="card" data-id="fogao">
+    <img src="https://i.postimg.cc/xCkxjmf3/fogao.webp" alt="Fogão">
+    <h2>🍳 Fogão</h2>
+    <p class="price">R$ 1.800</p>
+    <textarea placeholder="Mensagem interna"></textarea>
+    <button onclick="darPresente(this)">Dar Presente 🎁</button>
+    <p class="status"></p>
+  </div>
+
+  <!-- Geladeira -->
+  <div class="card" data-id="geladeira">
+    <img src="https://i.postimg.cc/Gtxkb3DL/geladeira-2.jpg" alt="Geladeira">
+    <h2>🧊 Geladeira</h2>
+    <p class="price">R$ 2.200</p>
+    <textarea placeholder="Mensagem interna"></textarea>
+    <button onclick="darPresente(this)">Dar Presente 🎁</button>
+    <p class="status"></p>
+  </div>
+
+  <!-- Máquina de Lavar -->
+  <div class="card" data-id="maquina">
+    <img src="https://i.postimg.cc/L5DZrycG/maquian-de-lavar.webp" alt="Máquina de Lavar">
+    <h2>👕 Máquina de Lavar</h2>
+    <p class="price">R$ 1.600</p>
+    <textarea placeholder="Mensagem interna"></textarea>
+    <button onclick="darPresente(this)">Dar Presente 🎁</button>
+    <p class="status"></p>
+  </div>
+
+  <!-- Liquidificador -->
+  <div class="card" data-id="liquidificador">
+    <img src="https://i.postimg.cc/gkLSb8Sr/liquidificador.png" alt="Liquidificador">
+    <h2>🥤 Liquidificador</h2>
+    <p class="price">R$ 300</p>
+    <textarea placeholder="Mensagem interna"></textarea>
+    <button onclick="darPresente(this)">Dar Presente 🎁</button>
+    <p class="status"></p>
+  </div>
+
+  <!-- PIX -->
+  <div class="card" data-id="pix">
+    <img src="https://i.postimg.cc/bYgDYB5L/pix.png" class="qr" alt="PIX">
+    <h2>💰 Doação via PIX</h2>
+    <p class="price">Valor mínimo R$100</p>
+    <input type="number" id="pixValue" placeholder="Digite o valor (mínimo 100)" min="100">
+    <textarea placeholder="Mensagem interna"></textarea>
+    <button onclick="abrirPIX()">Doar via PIX 🎁</button>
+  </div>
+
+</div>
+
+<!-- CONFIRMAÇÃO DE PRESENÇA -->
+<div class="rsvp">
+  <h2>📩 Confirme sua presença</h2>
+  <input type="text" id="nome" placeholder="Seu nome">
+  <select id="presenca">
+    <option value="">Você irá ao casamento?</option>
+    <option value="Sim">Sim</option>
+    <option value="Não">Não</option>
+  </select>
+  <button onclick="confirmarPresenca()">Confirmar</button>
+  <p id="mensagemConfirmacao"></p>
+</div>
+
+<!-- MODAL DO PIX -->
+<div id="pixModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharPIX()">&times;</span>
+    <h2>💰 Doação via PIX</h2>
+    <img src="https://i.postimg.cc/7Zjh58wD/qrcode-pix.png" alt="PIX" class="qr">
+    <p>PIX: 11960628025</p>
+    <p>Valor mínimo R$100</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
